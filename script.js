@@ -8,7 +8,7 @@ function toCelcius(temp, type){
     } else if (type === 'kelvin') {
         return (temp - 273.15).toFixed(2);
     } else if (type === 'celcius') {
-        return temp;
+        return temp.toFixed(2);
     }
 }
 
@@ -18,7 +18,15 @@ function toKelvin(temp, type){
     } else if (type === 'celcius') {
         return ((temp - 273.15)).toFixed(2);
     } else if (type === 'kelvin') {
-        return temp;
+        return temp.toFixed(2);
+    }
+}
+
+function toFahr(temp, type){
+    if (type === 'celcius') {
+        return ((temp - 32) * 5/9).toFixed(2);
+    } else if (type === 'kelvin') {
+        return ((temp - 273.15) * (9/5) + 32).toFixed(2);
     }
 }
 
@@ -40,6 +48,9 @@ document.querySelector('.submit').addEventListener('click', function() {
     } else if (inputType.value === 'celcius') {
         if ( outputType.value === 'kelvin') {
             let newTemp = toKelvin(inputTemp, 'celcius');
+            console.log(newTemp);
+        } else if (outputType.value === 'fahrenheit') {
+            let newTemp = toFahr(inputTemp, 'celcius');
             console.log(newTemp);
         }
     }
