@@ -1,0 +1,7 @@
+html, body {
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    gap: 0.1rem;
+    background-color: lightgrey;
+}
