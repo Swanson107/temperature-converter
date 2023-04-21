@@ -43,34 +43,43 @@ document.querySelector('.submit').addEventListener('click', function() {
         if (outputType.value === 'celcius'){
             let newTemp = toCelcius(inputTemp, 'fahrenheit');
             console.log(newTemp);
+            document.getElementById('result').textContent = String(newTemp);
         } else if (outputType.value === 'kelvin') {
             let newTemp = toKelvin(inputTemp, 'fahrenheit');
             console.log(newTemp);
+            document.getElementById('result').textContent = String(newTemp);
         } else if (outputType.value === 'fahrenheit') {
             let newTemp = toFahr(inputTemp, 'fahrenheit');
             console.log(newTemp);
+            document.getElementById('result').textContent = String(newTemp);
         }
     } else if (inputType.value === 'celcius') {
         if ( outputType.value === 'kelvin') {
             let newTemp = toKelvin(inputTemp, 'celcius');
             console.log(newTemp);
+            document.getElementById('result').textContent = String(newTemp);
         } else if (outputType.value === 'fahrenheit') {
             let newTemp = toFahr(inputTemp, 'celcius');
             console.log(newTemp);
+            document.getElementById('result').textContent = String(newTemp);
         } else if (outputType.value === 'celcius') {
             let newTemp = toCelcius(inputTemp, 'celcius');
             console.log(newTemp);
+            document.getElementById('result').textContent = String(newTemp);
         }
     } else if (inputType.value === 'kelvin') {
         if (outputType.value === 'celcius') {
             let newTemp = toCelcius(inputTemp, 'kelvin');
             console.log(newTemp);
+            document.getElementById('result').textContent = String(newTemp);
         } else if (outputType.value === 'fahrenheit') {
             let newTemp = toFahr(inputTemp, 'kelvin');
             console.log(newTemp);
+            document.getElementById('result').textContent = String(newTemp);
         } else if (outputType.value === 'kelvin') {
             let newTemp = toKelvin(inputTemp, 'kelvin');
             console.log(newTemp);
+            document.getElementById('result').textContent = String(newTemp);
         }
     }
 })
